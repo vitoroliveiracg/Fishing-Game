@@ -1,0 +1,33 @@
+:root{
+  
+  --fish-salmon-height: 8vh;
+  --fish-salmon-width: 10vw;
+
+  --fish-golden-height: 6vh;
+  --fish-golden-width: 8vw;
+
+}
+
+.fish{
+  position: absolute;
+  z-index: 0;
+}
+
+.fish img{
+  position: absolute;
+}
+
+
+.tilapia{
+  z-index: 1;
+  
+  height: var(--fish-salmon-height);
+  width: var(--fish-salmon-width);
+}
+
+.golden{
+  z-index: 1;
+
+  height: var(--fish-golden-height);
+  width: var(--fish-golden-width);
+}

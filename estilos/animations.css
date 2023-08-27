@@ -1,0 +1,25 @@
+/*
+.anim1{
+  position: absolute;
+  animation: animation01 2s ease-in-out forwards infinite;
+}
+
+@keyframes animation01 {
+  0%{
+    top: 50vh;
+    left:-30px
+  }
+  30%{
+    top: 40vh;
+    left: 40px;
+  }
+  70%{
+    top: 40vh;
+    left: 60px;
+  }
+  100%{
+    top: 52vh;
+    left: 130px;
+  }
+}
+*/

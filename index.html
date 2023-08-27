@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="./estilos/estilo-underwaterfishing.css">
+  <link rel="stylesheet" href="./estilos/estilo-overwaterboat.css">
+  <link rel="stylesheet" href="./estilos/fish-types.css">
+  <link rel="stylesheet" href="./estilos/animations.css">
+  
+  <link rel="shortcut icon" href="./imgs/favicon02.ico" type="image/x-icon">
+
+  <script src="./scripts/Classes.js"></script>
+  <script src="./scripts/models.js" defer></script>
+  <script src="./scripts/methods.js" defer></script>
+  <script src="./scripts/methods02.js" defer></script>
+  
+  <title>FISH: A Cardgame</title>
+</head>
+<body>
+  
+  <section class="overWaterBoat">
+
+    <div class="downwardsButton screenButtons" >
+      <p class="text">descend</p>
+      <img src="./imgs/crossScreenButton01.png" alt="">
+    </div>
+  </section>
+
+
+  <section class="underWaterFishing">
+    
+    <div class="upwardsButton screenButtons" >
+      <p class="text">rise</p>
+      <img src="./imgs/crossScreenButton01.png" alt="">
+    </div>
+    
+    <section class="leftButtons">
+      
+      <div class="tinyHookUpgradesTabIcon tinyUpgradeLeftTabIcon">
+        <img src="./imgs/hookTinyIcon03.png" alt="">
+      </div>
+  
+      <div class="tinyFishUpgradeTabIcon tinyUpgradeLeftTabIcon">
+        <img src="./imgs/tinyFishUpgradeTabIcon.png" alt="">
+      </div>
+
+    </section>
+
+    <section class="hookUpgrades">
+
+      <div class="hookUpgradesArea">
+
+        <div class="title">
+          
+          <p class="hint">Access this tab pressing <strong>Control</strong> in the keyboard</p>
+          <p class="big">Hook Upgrades</p>
+          <div class="money">0</div>
+          <img src="./imgs/fundoTitle02.png" class="img-fundo" alt="">
+          <img src="./imgs/hookIconArt06.png" alt="">
+        
+        </div>
+        
+        <div class="upgrades">
+          
+          <div class="hookUpgrade">
+            <img class="backgroundImage" src="./imgs/upgradeBackground0202.png" alt="">
+            <img class="upgradeImage" src="" alt="">
+            <p class="upgradeName">Nome do upgrade</p>
+            <p class="upgradeDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod porro vero error aliquid quisquam quas facilis, rem ratione distinctio ipsum doloremque cumque cum aperiam unde animi quaerat ex? Nam. Peixes que estão dentro do anzol sofresão 20% de lentidão</p>
+          </div>
+          
+          <div class="hookUpgrade">
+            <img class="backgroundImage" src="./imgs/upgradeBackground0202.png" alt="">
+            <img class="upgradeImage" src="" alt="">
+            <p class="upgradeName">Nome do upgrade</p>
+            <p class="upgradeDescription">Peixes sao mais <span class="valiososSpan">valiosos</span></p>
+          </div>
+  
+          <div class="hookUpgrade"></div>
+        </div>
+      </div>
+  
+    </section>
+
+    <section class="fishUpgrades">
+      <div class="especificUpgrade">
+
+      </div>
+      <div class="genericUpgrades">
+        
+      </div>
+    </section>
+    
+    <section class="fishingArea">
+
+      <div class="buttonSpawnFish"></div>
+
+      <img id="playPause" src="./imgs/play01.png" alt="">
+      <div class="fishingHook">
+        <img src="./imgs/fishing-hook03.png" alt="fishingHookImage">
+      </div>
+
+      <div class="ground"></div>
+
+    </section>
+    
+
+  </section>
+</body>
+</html>

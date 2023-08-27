@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel+Decorative:wght@400;700;900&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&display=swap');
+:root{
+  --fishing-hook-height: 6.8vh;
+  --fishing-hook-width: 4vw;
+  --fishing-hook-left: 46vw;
+}
+
+body{
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Silkscreen', cursive;
+  /* font-family: 'DotGothic16', sans-serif; */ /*Numeros finos e bonitos*/
+  /* font-family: 'VT323', monospace; */
+  letter-spacing: -3px;
+
+  /*Remove o selecionar das coisas*/
+  -webkit-user-drag: none;
+  -ms-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+img{
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  /*Remove o arrastar da imagem*/
+  pointer-events: none; 
+}
+
+#playPause{
+  position: absolute;
+  right: 5vw;
+  top: 7vh;
+}
+
+.underWaterFishing{
+  position: absolute;
+  top: 0;
+  transition: 470ms;
+}
+
+/* Botao temporario */
+
+.buttonSpawnFish{
+  position: absolute;
+  top: 15vh;
+  right: 5vw;
+
+  background-color: #eecb62;
+
+  width: 75px;
+  height: 75px;
+}
+
+.upwardsButton{
+  cursor: pointer;
+  position: absolute;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  
+  transition: 500ms;
+}
+
+.upwardsButton .text{
+  /* opacity: 0.1; */
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  left: -10px;
+  margin: 0;
+  width: 100vw;
+  color: rgba(255, 255, 255, 0.616);
+}
+
+.upwardsButton img{
+  
+  width: 100vw;
+  height: 40px;
+}
+
+/*  ------- HOOK & AREA FOR FISHING ------  */
+
+.fishingArea{
+  height: 100vh;
+  min-width: 100vw;
+  background-color: rgb(127, 161, 255);
+}
+
+.fishingHook{
+  position: absolute;
+  z-index: 2;
+  left: var(--fishing-hook-left);
+}
+
+.fishingHook img{
+  height: var(--fishing-hook-height);
+  width: var(--fishing-hook-width);
+}
+
+.fishingArea .ground{
+  position: absolute;
+  background-color: #f0d74cb4;
+  left: 0;
+  top: 93vh;
+  height: 7vh;
+  width: 100vw;
+}
+
+/* ------ HOOK UPGRADES ------ */
+
+.hookUpgrades{
+  position: absolute;
+  background-color: rgb(212, 134, 17);
+  left: -70vw;
+  height: 100vh;
+  width: 70vw;
+  z-index: 5;
+
+  transition: 350ms;
+}
+
+.hookUpgradesArea{
+  position: absolute;
+  background-color: blue;
+  
+  
+  height: 100vh;
+  width: 70vw;
+}
+
+.hookUpgradesArea .title{
+  color: rgb(105, 46, 46);
+  position: fixed;
+  z-index: 6;
+  background-color: #BD4A08;
+  
+  margin: 0;
+  height: 32vh;
+  width: 70vw;
+
+  box-shadow: -10px 5px 12px rgba(0, 0, 0, 0.575);
+}
+
+.hookUpgradesArea .title p{
+  position: absolute;
+}
+
+.hookUpgradesArea .title .hint{
+  text-align: center;
+  color: rgba(105, 46, 46, 0.493);
+  letter-spacing: 1px;
+  font-size: 12px;
+  right: 5vw;
+  top: -1vh;
+}
+
+.hookUpgradesArea .title .big{
+  font-size: larger;
+  right: 5vw;
+  top: 3vh;
+}
+
+.hookUpgradesArea .title .money{
+  position: absolute;
+  color: #eecb62;
+
+  text-align: right;
+  font-size: 8vh;
+  background-image: linear-gradient(90deg,#bf000005,#bf0000, #4d0909c0);
+  
+  padding: 8px;
+  bottom: 5vh;
+  right: 5vw;
+  height: 13vh;
+  width: 45vw;
+}
+
+.hookUpgradesArea .title .img-fundo {
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  height: 32vh;
+  width: 70vw;
+}
+
+.hookUpgradesArea .title img{
+  height: 20vh;
+  margin: 6vh 2vw;
+}
+
+.hookUpgradesArea .upgrades{
+  position: absolute;
+  background-color: chartreuse;
+  background-image: url('../imgs/fundosUpgrades01.png');
+
+  height: 66vh;
+  width: 70vw;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  margin-top: 32vh;
+  padding-top: 2vh;
+
+}
+
+.hookUpgradesArea .upgrades .hookUpgrade{
+  cursor: pointer;
+  margin: 0 0 18px 0;
+  min-height: 150px;
+  width: 60vw;
+
+  transition: 500ms ease-in-out;
+}
+
+.hookUpgrade p {
+  margin: 0;
+}
+
+.hookUpgrade .upgradeDescription{
+  /* font-family: ; */
+  /* position: relative; */
+  letter-spacing: 0px;
+  font-size: 12px;
+  padding: 0 1.5vw 0 0;
+  /* background-color: #bd4a0871; */
+  float: right;
+  height: 100px;
+  text-align: left;
+  width: 46vw;
+
+  overflow: auto;
+}
+
+.hookUpgrade .upgradeName{
+  margin: 8px 0 5px 0;
+  padding: 0 50px 0 0;
+  text-align: right;
+  
+}
+
+.hookUpgrade .upgradeImage {
+  /* position: relative; */
+  float: left;
+  margin: 15px 0 auto 2.8vw;
+  height: 9vw;
+  width: 9vw;
+  background-color: #BD4A08;
+  /* z-index: 6; */
+}
+
+.hookUpgrade span{
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.753);
+  cursor: pointer;
+  color: aquamarine;
+}
+
+
+.hookUpgrade .backgroundImage{
+  position: absolute;
+  height: 150px;
+  width: 60vw;
+  z-index: -1;
+}
+
+/* ---------- LEFT ICONS ------------- */
+
+.leftButtons{
+  position: absolute;
+  
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  left: 0;
+  height: 100vh;
+
+  margin: 0;
+  padding: 10vh 0;
+}
+
+.leftButtons .tinyUpgradeLeftTabIcon{
+  margin: 0 0 7.5vh 0;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1.5vh 0.6vw 1.5vh 1.3vw;
+
+  z-index: 2;
+
+  background-color: rgb(170, 0, 0);
+  border-radius: 0 6px 6px 0;
+  transition: 350ms;
+
+  width: 3vw;
+  height: 7vh;
+}
+
+.leftButtons .tinyHookUpgradesTabIcon img{
+  position: absolute;
+  right: 0;
+  width: 3.2vw;
+  height: 6.6vh;
+}
+
+.leftButtons .tinyFishUpgradeTabIcon img{
+  position: absolute;
+  right: 0;
+  width: 3.2vw;
+  height: 6.6vh;
+}
+
+/* -------- OUTRAS COISAS ----------- */
+
+.moneyEarnSpam{
+  position: absolute;
+  letter-spacing: 0px;
+  text-align: center;
+  min-width: 30px;
+  min-height: 20px;
+  border-top: 1px solid white;
+  z-index: 10;
+  border-bottom: 1px solid white;
+  color: rgb(175, 248, 157);
+  font-size: 13px;
+  background-color: rgba(0, 0, 0, 0.288);
+}
+
+.descricao{
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(3, 3, 3, 0.781);
+  box-shadow: 0 0 9px black;
+  padding: 10px;
+  border-radius: 10px;
+  letter-spacing: 0px;
+  font-size: 12px;
+  color: bisque;
+  min-height: 50px;
+  min-width: 200px;
+}
+
+.particle{
+  position: absolute;
+  z-index: 2;
+  /* height: 64px; */
+  background-image: rgb(177, 108, 108);
+}
